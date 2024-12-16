@@ -17,3 +17,5 @@
 {"level":"info","message":"Database synchronized","service":"library-service","timestamp":"2024-12-16T16:13:59.290Z"}
 {"level":"info","message":"Database synchronized","service":"library-service","timestamp":"2024-12-16T16:14:12.871Z"}
 {"level":"info","message":"Database synchronized","service":"library-service","timestamp":"2024-12-16T16:15:18.744Z"}
+{"level":"info","message":"Database synchronized","service":"library-service","timestamp":"2024-12-16T18:26:10.254Z"}
+{"level":"info","message":"Database seeded successfully","service":"library-service","timestamp":"2024-12-16T18:26:10.274Z"}

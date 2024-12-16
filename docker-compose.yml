@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_USER=azooz 
+      - DB_PASSWORD=0000
+      - DB_NAME=testdb
+      - DB_PORT=5432
+      - NODE_ENV=development
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: sh -c "npm start"
+
+  db:
+    image: postgres:15-alpine
+    ports:
+      - "8888:5432"
+    environment:
+      - POSTGRES_USER=azooz
+      - POSTGRES_PASSWORD=0000
+      - POSTGRES_DB=testdb
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+    ports:
+      - "5050:80"
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@admin.com
+      - PGADMIN_DEFAULT_PASSWORD=admin
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:
