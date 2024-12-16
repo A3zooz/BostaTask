@@ -92,10 +92,15 @@ Start the server:
 
 The API is now running at http://localhost:5000.
 
+## Database Schema
+
+![alt text](schema.png)
 
 
-API Documentation
-Borrowers
+
+## API Documentation
+**Borrowers**
+
 Add Borrower
 
 URL: POST /borrowers/
@@ -106,6 +111,8 @@ email (string, required)
 Response:
 201 Created
 Returns the created borrower object.
+
+
 Get All Borrowers
 
 URL: GET /borrowers/
@@ -130,7 +137,10 @@ Delete Borrower
 URL: DELETE /borrowers/{id}
 Response:
 204 No Content
-Books
+
+
+**Books**
+
 Add Book
 
 URL: POST /books/
@@ -174,7 +184,9 @@ URL: GET /books/search?title=&author=&ISBN=
 Response:
 200 OK
 Returns a list of books matching the search criteria.
-Borrowed Books
+
+
+**Borrowed Books**
 Checkout Book
 
 URL: POST /book-borrowers/checkout
